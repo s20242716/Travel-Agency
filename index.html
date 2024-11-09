@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Tours & Travel Website Design Tutorial </title>
+    <!-- font google  -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+     <!-- file normalize cdn link   -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
+     <!-- custom file main style sheet  -->
+     <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+   
+<!-- ###############Section Header ####################### -->
+
+ <!-- header section starts  -->
+ <header class="header">
+     
+    <a href="#" class="logo"></a>
+
+    <nav class="navbar">  
+       <ul>
+           <li style="--i:1"> <a href="#home">home</a></li>
+          <li style="--i:2"> <a href="#features">features</a></li> 
+           <li style="--i:3"><a href="#about">about</a></li> 
+          <li style="--i:4"><a href="#gallery">gallery</a></li>  
+           <li style="--i:5"><a href="#review">review</a></li> 
+          <li style="--i:6"><a href="#contact">contact</a></li>  
+       </ul>
+
+    </nav>
+
+
+   <div class="menu"><i class="fas fa-bars"></i></div>
+
+    </header>
+    <!-- header section ends  -->
+
+
+<!-- ###############Section Home ####################### -->
+
+
+    <!-- home section starts -->
+    
+    <section class="home" id="home">
+        <div class="img-container">
+            <img src="./images/bg.jpg"></img>
+        </div>
+        
+        <div class="content">
+            <h1>Let's go.</h1>
+            <h3>It's time to see more</h3>
+
+            <div class="form-container">
+                <form id="tripCalculator" onsubmit="calculateCost(event)">
+                    <h3>Trip Cost Calculator </h3>
+
+                    <span>Select Destination</span>
+                    <select id="destination" required>
+                        <option value="">Choose your destination</option>
+                        <option value="paris">Paris, France</option>
+                        <option value="tokyo">Tokyo, Japan</option>
+                        <option value="bali">Bali, Indonesia</option>
+                        <option value="nyc">New York City, USA</option>
+                        <option value="dubai">Dubai, UAE</option>
+                        <option value="rome">Rome, Italy</option>
+                        <option value="sydney">Sydney, Australia</option>
+                        <option value="london">London, UK</option>
+                        <option value="barcelona">Barcelona, Spain</option>
+                        <option value="cairo">Cairo, Egypt</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="bangkok">Bangkok, Thailand</option>
+                        <option value="vancouver">Vancouver, Canada</option>
+                        <option value="capetown">Cape Town, South Africa</option>
+                        <option value="riodejaneiro">Rio de Janeiro, Brazil</option>
+                        <option value="venice">Venice, Italy</option>
+                        <option value="amsterdam">Amsterdam, Netherlands</option>
+                        <option value="prague">Prague, Czech Republic</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="santorini">Santorini, Greece</option>
+                    </select>
+
+                    <span>Guest Members</span>
+                    <input type="number" id="guests" placeholder="How many people" required min="1">
+
+                    <span>Arrival Date</span>
+                    <input type="date" id="arrival" required>
+
+                    <span>Leaving Date</span>
+                    <input type="date" id="leaving" required>
+
+                    <span>Travel Class</span>
+                    <select id="travelClass" required>
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                        <option value="firstClass">First Class</option>
+                    </select>
+                    
+                    <input type="submit" class="btn" value="Calculate Cost">
+                </form>
+
+                <!-- Modal for displaying calculated cost -->
+                <div id="costModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <p id="modalText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- home section ends -->
+
+
+<!-- ###############Section 3 ####################### -->
+
+    <!-- features section starts -->
+    <section class="feature" id="features">
+
+        <h1 class="heading">Top Destinations</h1>
+        <h3 class="title">Explore our top destinations</h3>
+
+        <div class="card-container">
+
+            <div class="card">
+                <img src="images/photo1.jpg" alt="">
+                <div class="info">
+                    <h3>Austria</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Explore the beautiful landscapes and vibrant culture of Austria. A place full of history!</p>
+                    <a href="#"><button class="btn">visit now</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/photo2.jpg" alt="">
+                <div class="info">
+                    <h3>Mumbai India</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Discover the bustling streets and rich culture of Mumbai, a vibrant metropolis!</p>
+                    <a href="#"><button class="btn">visit now</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/photo3.jpg" alt="">
+                <div class="info">
+                    <h3>Angel Falls</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                    <p>Marvel at the majestic Angel Falls, the world's highest uninterrupted waterfall!</p>
+                    <a href="#"><button class="btn">visit now</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- features section ends -->
+
+
+<!-- ###############Section 4 ####################### -->
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+        <h1 class="heading">About Us</h1>
+        <h3 class="title">Explore the World with Us</h3>
+
+        <div class="row">
+            <div class="image">
+                <img src="images/about-us.svg" alt="World Travel">
+            </div>
+
+            <div class="content">
+                <h3>Why Choose Us?</h3>
+                <p>
+                    We are a team of passionate travelers who believe in the power of exploration. With us, you can discover hidden gems, enjoy cultural experiences, and create unforgettable memories.
+                    From personalized travel guides to round-the-clock support, we make sure every journey is special and hassle-free.
+                </p>
+                <a href="#"><button class="btn">Read More</button></a>
+            </div>
+        </div>
+
+        <div class="highlights">
+            <div class="highlight-box">
+                <i class="fas fa-map-signs"></i>
+                <h3>Travel Guide</h3>
+                <p>Our expert guides will take you to places you’ve never seen and share unique insights.</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Service</h3>
+                <p>We’re available around the clock to make sure your journey is smooth and worry-free.</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fas fa-hotel"></i>
+                <h3>Hotel Booking</h3>
+                <p>Get access to the best hotels with exclusive deals and seamless booking experiences.</p>
+            </div>
+        </div>
+    </section>
+    <!-- about section ends -->
+
+<!-- ###############Section 5 ####################### -->
+
+    <!-- gallery section starts -->
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading">our gallery</h1>
+        <h3 class="title">explore the most visited places</h3>
+
+        <div class="box-container">
+
+           <div class="box">
+
+              <div class="image">
+                <img src="images/img1.jpg" alt="">
+              </div>
+
+              <div class="content">
+                 <h3>African Safari</h3>
+                 <p>
+                    Embark on a thrilling journey through the African wilderness, where nature's beauty meets adventure! Experience the wildlife up close and immerse yourself in the diverse ecosystems of Africa.
+                </p>
+
+                 <a href="#"><button class="btn">explore!</button></a>
+              </div>
+
+           </div>
+
+           <div class="box">
+
+              <div class="image">
+                <img src="images/img2.jpg" alt="">
+              </div>
+
+              <div class="content">
+                 <h3>Austria – Vienna, Hallstatt</h3>
+                 <p>
+                    Discover Austria's historic cities and scenic landscapes, where Vienna's vibrant culture meets Hallstatt's peaceful charm. Explore its natural beauty and rich traditions!
+                </p>
+
+                 <a href="#"><button class="btn">explore!</button></a>
+              </div>
+
+           </div>
+
+           <div class="box">
+
+              <div class="image">
+                <img src="images/img3.jpg" alt="">
+              </div>
+
+              <div class="content">
+                 <h3>Molokini and Turtle Snorkeling</h3>
+                 <p>
+                    Dive into the crystal-clear waters of Molokini, where vibrant marine life and sea turtles await. Explore this underwater paradise on a memorable snorkeling adventure!
+                </p>
+                 <a href="#"><button class="btn">explore!</button></a>
+              </div>
+
+           </div>
+
+           <div class="box">
+
+              <div class="image">
+                <img src="images/img4.jpg" alt="">
+              </div>
+
+              <div class="content">
+                 <h3>Scandinavia</h3>
+                 <p>
+                    Explore the stunning landscapes of Scandinavia, from majestic fjords to vibrant cities. Experience a perfect blend of natural beauty and rich cultural heritage.
+                </p>
+                 <a href="#"><button class="btn">explore!</button></a>
+              </div>
+
+           </div>
+
+           <div class="box">
+
+              <div class="image">
+                <img src="images/img5.jpg" alt="">
+              </div>
+
+              <div class="content">
+                 <h3>South Africa</h3>
+                 <p>
+                    Experience the beauty of South Africa, from its diverse wildlife to the vibrant cities. Discover a land rich in culture, history, and breathtaking landscapes.
+                </p>
+                 <a href="#"><button class="btn">explore!</button></a>
+              </div>
+
+           </div>
+
+        </div>
+
+
+    </section>
+    <!-- gallery section ends -->
+
+
+<!-- ###############Section 6 ####################### -->
+
+    <!-- review section starts -->
+    <section class="review" id="review">
+
+        <h1 class="heading">customers review</h1>
+        <h3 class="title">what peoples says about us</h3>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                    The tours in this website are great. I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my freind to join this company!
+                </p>
+                <div class="user">
+                    <img src="images/pic-1.png" alt="">
+                    <div class="info">
+                        <h3>John Doe</h3>
+                        <span>Nov 5, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                    The tours in this website are great. I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my freind to join this company!
+                </p>
+                <div class="user">
+                    <img src="images/pic-2.png" alt="">
+                    <div class="info">
+                        <h3>John Doe</h3>
+                        <span>Nov 5, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                    The tours in this website are great. I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my freind to join this company!
+                </p>
+                <div class="user">
+                    <img src="images/pic-3.png" alt="">
+                    <div class="info">
+                        <h3>John Doe</h3>
+                        <span>Nov 5, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <!-- review section ends -->
+
+    <!-- ###############Section 7 ####################### -->
+
+    <!-- newsletter section starts -->
+    <section class="newsletter">
+      
+        <div class="box-newsletter">
+            
+            <h1>sign up for discount</h1>
+            <p>get in touch with us and get latest updates</p>
+
+            <form action="">
+                <input type="email"  placeholder="enter your email">
+                <input type="submit" class="btn" value="send">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- newsletter section ends -->
+
+       
+
+    <!-- ###############Section 8 ####################### -->
+
+     <!-- Contact Section Starts -->
+        <section class="contact" id="contact">
+            <h1 class="heading">Contact Us</h1>
+            <h3 class="title">Book your tickets now</h3>
+
+            <form id="contactForm" onsubmit="return validateForm(event)">
+                <div class="inputBox">
+                    <input type="text" name="fname" id="fname" placeholder="First name">
+                    <input type="text" name="lname" id="lname" placeholder="Last name">
+                </div>
+                
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="number" name="phone" id="phone" placeholder="Phone">
+                </div>
+
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
+     <!-- contact section ends -->
+
+<!-- ###############Section  Footer ####################### -->
+
+    <!-- footer section starts -->
+    <footer class="footer">
+
+        <div class="box">
+            <h3>explore.</h3>
+            <p>Discover new destinations and experiences that will inspire you. Embark on a journey to the world's most beautiful places!</p>
+        </div>
+
+        <div class="box">
+            <h3>Popular Destinations</h3>
+            <a href="#paris">Paris</a>
+            <a href="#newyork">New York</a>
+            <a href="#tokyo">Tokyo</a>
+            <a href="#sydney">Sydney</a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="box">
+    <h3>Contact us</h3>
+    <div class="contact-details">
+        <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+        <p><strong>Email:</strong> contact@yourwebsite.com</p>
+    </div>
+    <div class="social-links">
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</div>
+
+        <h1 class="credit">
+          Created By <a class="coder">s20242716 </a>| All Right Reserved!
+        </h1>    
+    </footer>
+    <!-- footer section ends -->
+
+
+<!-- ############### Custom link file js  ####################### -->
+
+<script src="js/app.js"></script>
+
+     <!--  file jQuery cdn link    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- custom file js main  -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
